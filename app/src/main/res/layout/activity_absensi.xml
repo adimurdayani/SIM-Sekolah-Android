@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.absen.AbsensiActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:background="@color/red2"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Kembali"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_below="@id/top"
+        android:background="@color/red2"/>
+
+    <ScrollView
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/nomor_id_card"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/e_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/nomor_id_card"
+                        android:inputType="number"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Keterangan Hadir"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/keterangan_hadir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input"
+                        android:fontFamily="@font/poppins_medium"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Harap masukkan nomor ID Card dengan benar agar dapat melakukan abseni kehadiran."
+                        android:textColor="@color/red2"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSp" />
+
+                    <LinearLayout
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_btn_red"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/btn_absen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ProgressBar
+                                android:id="@+id/progress"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:theme="@style/ProgressBarStyle"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/text_absen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="ABSEN"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

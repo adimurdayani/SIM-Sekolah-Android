@@ -1,0 +1,21 @@
+package com.example.simsekolah.ui.aplikasi
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.ImageView
+import com.example.simsekolah.R
+
+class AplikasiActivity : AppCompatActivity() {
+    lateinit var btn_kembali: ImageView
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_aplikasi)
+        setinit()
+    }
+
+    private fun setinit() {
+        btn_kembali = findViewById(R.id.btn_kembali)
+
+        btn_kembali.setOnClickListener { onBackPressed() }
+    }
+}

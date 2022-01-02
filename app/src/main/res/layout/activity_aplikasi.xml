@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.aplikasi.AplikasiActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Tentang Aplikasi"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="SIM SEKOLAH"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Sim Sekolah adalah sebuah sistem informasi manajemen sekolah berbasis website sebagai solusi administrasi terpadu untuk sekolah, yang memiliki beberapa modul terintegrasi yang dapat diakses oleh semua anggota sekolah (guru, wali kelas, pegawai sekolah dan siswa) dan orang tua/wali siswa.
+
+\n\nSim Sekolah membantu sekolah untuk mengakomodir kegiatan administrasi internal sekolah mencakup kebutuhan manajemen sekolah dan merekatkan komunikasi antara pihak sekolah dengan siswa maupun orang tua/wali siswa.
+
+\n\nDengan teknologi informasi dan memanfaatkan perkembangannya, manajemen sekolah dapat diselenggarakan secara lebih efektif, efisien, akuntabel dan transparan. Sim Sekolah dikembangkan berdasarkan kebutuhan sekolah, standarisasi diknas (dapodik) dan perkembangan teknologi informasi yang sangat cepat."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

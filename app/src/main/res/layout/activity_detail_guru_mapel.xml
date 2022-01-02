@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.guru.DetailGuruMapel">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_kembali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="List Guru Mapel"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/top"
+        android:background="@color/red2"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/judul_dataguru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Data Guru Mapel"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judul_dataguru"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="List data guru mata pelajaran"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/img_dataguru"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/top"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_data_guru" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/sw_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/img_dataguru">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/list_guru" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

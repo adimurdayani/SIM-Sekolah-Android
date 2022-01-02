@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.simsekolah">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/config_network"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SIMSekolah"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.profile.InfoProfile"></activity>
+        <activity android:name=".ui.profile.UbahProfile" />
+        <activity android:name=".ui.profile.UbahPassword" />
+        <activity android:name=".ui.nilai.NilaiUlangan" />
+        <activity android:name=".ui.nilai.DetailSiswa" />
+        <activity android:name=".ui.nilai.DetailNIlai" />
+        <activity android:name=".ui.nilai.NilaiSiswa" />
+        <activity android:name=".ui.siswa.DataSiswa" />
+        <activity android:name=".ui.guru.DetailGuruMapel" />
+        <activity android:name=".ui.jadwal.DetailSiswa" />
+        <activity android:name=".ui.jadwal.DetailJadwal" />
+        <activity android:name=".ui.auth.LoginSiswa" />
+        <activity android:name=".ui.utama.MenuUtama" />
+        <activity android:name=".ui.home.HomeSiswa" />
+        <activity android:name=".ui.tentang.TentangActivity" />
+        <activity android:name=".ui.siswa.SiswaActivity" />
+        <activity android:name=".ui.profile.ProfileActivity" />
+        <activity android:name=".ui.nilai.NilaiActivity" />
+        <activity android:name=".ui.jadwal.JadwalActivity" />
+        <activity android:name=".ui.guru.GuruActivity" />
+        <activity android:name=".ui.aplikasi.AplikasiActivity" />
+        <activity android:name=".ui.absen.AbsensiActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ui.home.HomeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
